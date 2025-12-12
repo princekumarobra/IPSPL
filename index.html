@@ -29,8 +29,9 @@
 
   <!-- MENU BAR (below header) -->
   <div class="menu-bar" id="menuBar">
-    <button class="hamburger" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">☰ Menu</button>
+    <button class="hamburger" id="menuToggle" aria-expanded="false" aria-controls="navWrap">☰ Menu</button>
 
+    <!-- navWrap acts as horizontal desktop menu and vertical dropdown on mobile -->
     <nav class="navwrap" id="navWrap" aria-label="Main navigation">
       <ul class="menu" id="mainMenu">
         <li><a href="index.html" class="active">Home</a></li>
@@ -42,22 +43,6 @@
         <li><a href="disclaimer.html">Disclaimer</a></li>
       </ul>
     </nav>
-  </div>
-
-  <!-- MOBILE HORIZONTAL MENU OVERLAY -->
-  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile menu">
-    <div class="mobile-menu-inner">
-      <button id="mobileMenuClose" class="mobile-close" aria-label="Close menu">← Back</button>
-      <div class="mobile-menu-scroll" id="mobileMenuScroll" tabindex="0" role="list">
-        <a href="index.html" class="mobile-link" role="listitem">Home</a>
-        <a href="about.html" class="mobile-link" role="listitem">About</a>
-        <a href="service.html" class="mobile-link" role="listitem">Services</a>
-        <a href="gallery.html" class="mobile-link" role="listitem">Gallery</a>
-        <a href="contact.html" class="mobile-link" role="listitem">Contact</a>
-        <a href="privacy.html" class="mobile-link" role="listitem">Privacy</a>
-        <a href="disclaimer.html" class="mobile-link" role="listitem">Disclaimer</a>
-      </div>
-    </div>
   </div>
 
   <!-- HERO (height fixed 300px) -->
