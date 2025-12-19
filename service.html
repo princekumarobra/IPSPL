@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Our Services — Intelligent Property Solutions Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Square gallery like main gallery */
+        .gallery-grid {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .caption {
+            padding: 6px;
+            font-size: 13px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Fullscreen popup */
+        .img-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .img-popup img {
+            max-width: 92%;
+            max-height: 92%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+    <div class="brand">
+        <img src="logo.jpg" class="brand-logo">
+        <div class="brand-text">
+            <h1>Intelligent Property Solutions Pvt. Ltd.</h1>
+            <p>Your Complete Partner in Property Planning & Design</p>
+        </div>
+    </div>
+    <a href="tel:+919325179055" class="call-btn">Call Now: 9325179055</a>
+</header>
+
+<!-- MENU -->
+<nav class="menu-bar">
+    <div class="container">
+        <ul class="menu-list" id="mainMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="service.html">Our Services</a></li>
+            <li><a href="gallery.html">Project Gallery</a></li>
+            <li><a href="our-client.html">Our Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg" style="background-image:url('hero.jpg')"></div>
+    <div class="hero-content">
+        <h2>Premium <br><span>Construction & Waterproofing</span></h2>
+        <p>Terrace • Basement • Podium • PU/APP Membrane • Civil Repairs</p>
+
+        <div class="hero-btns">
+            <a href="tel:+919325179055" class="btn-main">Call Now</a>
+            <a href="contact.html" class="btn-sub">Request Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="container intro-card">
+    <h3>Our Professional Services</h3>
+    <p class="muted">
+        IPSPL delivers strong, long-lasting waterproofing and construction services with warranty support.
+        We use branded materials and trained technicians for every project.
+    </p>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="container">
+    <h3>Services We Offer</h3>
+
+    <div class="services-grid-main" style="margin-top:14px;display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));">
+
+        <div class="s-item-card">
+            <h4>Basement & Podium Waterproofing</h4>
+            <p class="muted">PU membranes, cementitious coating & leak-proof systems.</p>
+        </div>
+
+        <div class="s-item-card">
+            <h4>Terrace & Balcony Waterproofing</h4>
+            <p class="muted">PU liquid membrane, UV coating, screed protection.</p>
+        </div>
+
+        <div class="s-item-card">
+            <h4>PU & APP Membrane</h4>
+            <p class="muted">Torch-applied APP sheet & high-grade polyurethane systems.</p>
+        </div>
+
+        <div class="s-item-card">
+            <h4>Epoxy Flooring</h4>
+            <p class="muted">Industrial epoxy, PU flooring & anti-slip coatings.</p>
+        </div>
+
+        <div class="s-item-card">
+            <h4>Civil Repair Work</h4>
+            <p class="muted">Crack injection, structural repair & re-profiling.</p>
+        </div>
+
+        <div class="s-item-card">
+            <h4>Leak Detection & Warranty Support</h4>
+            <p class="muted">Water testing, core cuts, tracing & maintenance contracts.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="container" style="margin-top:20px;">
+    <div class="stats-wrap">
+        <div class="stat-card glossy-blue">
+            <div class="stat-icon">🛡️</div>
+            <strong>15+</strong>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-card glossy-red">
+            <div class="stat-icon">📁</div>
+            <strong>150+</strong>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-card glossy-dark">
+            <div class="stat-icon">⏱️</div>
+            <strong>10 yrs</strong>
+            <p>Warranty Support</p>
+        </div>
+    </div>
+</section>
+
+<!-- MINI GALLERY -->
+<section class="container" style="margin-top:20px;">
+    <h3>Project Samples</h3>
+
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="image/photo1.jpg" alt=""><div class="caption">Project Sample</div></div>
+        <div class="gallery-item"><img src="image/photo4.jpg" alt=""><div class="caption">PU Membrane</div></div>
+        <div class="gallery-item"><img src="image/photo5.jpg" alt=""><div class="caption">Terrace Work</div></div>
+    </div>
+
+    <div style="text-align:right;margin-top:8px;">
+        <a href="gallery.html" class="btn-view">View Full Gallery</a>
+    </div>
+</section>
+
+<!-- CTA BLOCK -->
+<section class="container" style="margin-top:20px;">
+    <div class="intro" style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.06)">
+        <h4 style="color:var(--primary)">Need Waterproofing Help?</h4>
+        <p class="muted">Book a free inspection today. Our engineer will check leakage & provide a detailed work plan.</p>
+
+        <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="tel:+919325179055" class="btn-phone">📞 Call Now</a>
+            <a href="https://wa.me/919325179055" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+            <a href="contact.html" class="btn-outline">Request Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- POPUP VIEW -->
+<div class="img-popup" id="imgPopup">
+    <img id="popupImg" src="">
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="logo.jpg" class="footer-logo">
+            <h4>Intelligent Property Solutions Pvt. Ltd.</h4>
+            <p>Reliable Waterproofing & Construction Experts</p>
+        </div>
+        <div class="footer-contact">
+            <p>Plot No. 38, Saraswati Kunj, Gurugram</p>
+            <p>📞 9325179055</p>
+            <p>📧 ipswaterproofing@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 IPSPL — Designed by Prince Tech Solutions Pvt. Ltd.</p>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="contact.html" class="float-left">📩 Enquiry</a>
+<a href="https://wa.me/919325179055" class="float-right">💬</a>
+
+<script>
+    // Popup image script
+    const popup = document.getElementById('imgPopup');
+    const popupImg = document.getElementById('popupImg');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            popupImg.src = img.src;
+            popup.style.display = "flex";
+        });
+    });
+
+    popup.addEventListener('click', () => {
+        popup.style.display = "none";
+    });
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

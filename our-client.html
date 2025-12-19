@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Clients — Intelligent Property Solutions Pvt. Ltd.</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .client-grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            margin-top: 18px;
+        }
+
+        .client-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .client-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .client-name {
+            padding: 10px 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Full screen viewer */
+        .img-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .img-popup img {
+            max-width: 92%;
+            max-height: 92%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+    <div class="brand">
+        <img src="logo.jpg" class="brand-logo">
+        <div class="brand-text">
+            <h1>Intelligent Property Solutions Pvt. Ltd.</h1>
+            <p>Your Complete Partner in Property Planning & Design</p>
+        </div>
+    </div>
+    <a href="tel:+919325179055" class="call-btn">Call Now: 9325179055</a>
+</header>
+
+<!-- MENU -->
+<nav class="menu-bar">
+    <div class="container">
+        <ul id="mainMenu" class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="gallery.html">Project Gallery</a></li>
+            <li><a class="active" href="our-client.html">Our Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg" style="background-image:url('hero.jpg')"></div>
+    <div class="hero-content">
+        <h2>Our Trusted <br><span>Clients & Partners</span></h2>
+        <p>We proudly served 300+ clients with leak-proof, long-lasting waterproofing solutions.</p>
+    </div>
+</section>
+
+<!-- CLIENT SECTION -->
+<section class="container intro-card">
+    <h3>Our Valuable Clients</h3>
+    <p class="muted">
+        Below is a showcase of clients we’ve worked with. Each project was completed with full quality assurance, 
+        branded materials and long-term warranty support.
+    </p>
+</section>
+
+<section class="container">
+    <div class="client-grid">
+
+        <!-- Client 1 -->
+        <div class="client-card">
+            <img src="image/photo1.jpg" alt="Client Image 1">
+            <div class="client-name">Client 1</div>
+        </div>
+
+        <!-- Client 2 -->
+        <div class="client-card">
+            <img src="image/photo2.jpg" alt="Client Image 2">
+            <div class="client-name">Client 2</div>
+        </div>
+
+        <!-- Client 3 -->
+        <div class="client-card">
+            <img src="image/photo3.jpg" alt="Client Image 3">
+            <div class="client-name">Client 3</div>
+        </div>
+
+        <!-- Client 4 -->
+        <div class="client-card">
+            <img src="image/photo4.jpg" alt="Client Image 4">
+            <div class="client-name">Client 4</div>
+        </div>
+
+        <!-- Client 5 -->
+        <div class="client-card">
+            <img src="image/photo5.jpg" alt="Client Image 5">
+            <div class="client-name">Client 5</div>
+        </div>
+
+        <!-- Client 6 -->
+        <div class="client-card">
+            <img src="image/photo6.jpg" alt="Client Image 6">
+            <div class="client-name">Client 6</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="container" style="margin-top:18px;">
+    <div class="intro" style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.06)">
+        <h4 style="color:var(--primary)">Want to Work With Us?</h4>
+        <p class="muted">We provide complete waterproofing, PU/APP membrane work, and civil repair solutions.</p>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="tel:+919325179055" class="btn-phone">📞 Call Us</a>
+            <a href="https://wa.me/919325179055" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+            <a href="contact.html" class="btn-outline">Hire Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- POPUP VIEW -->
+<div class="img-popup" id="imgPopup">
+    <img id="popupImg" src="">
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="logo.jpg" class="footer-logo">
+            <h4>Intelligent Property Solutions Pvt. Ltd.</h4>
+            <p>Reliable Waterproofing & Construction Experts</p>
+        </div>
+        <div class="footer-contact">
+            <p>Plot No. 38, Saraswati Kunj, Gurugram</p>
+            <p>📞 9325179055</p>
+            <p>📧 ipswaterproofing@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 IPSPL — Designed by Prince Tech Solutions Pvt. Ltd.</p>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="contact.html" class="float-left">📩 Enquiry</a>
+<a href="https://wa.me/919325179055" class="float-right">💬</a>
+
+<script>
+    const popup = document.getElementById('imgPopup');
+    const popupImg = document.getElementById('popupImg');
+
+    document.querySelectorAll('.client-card img').forEach(img => {
+        img.addEventListener('click', () => {
+            popupImg.src = img.src;
+            popup.style.display = "flex";
+        });
+    });
+
+    popup.addEventListener('click', () => popup.style.display = "none");
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project Gallery — Intelligent Property Solutions Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Square Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            margin-top: 16px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 13px;
+            padding: 6px;
+            color: #555;
+        }
+
+        /* FULLSCREEN POPUP */
+        .img-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .img-popup img {
+            max-width: 92%;
+            max-height: 92%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+    <div class="brand">
+        <img src="logo.jpg" class="brand-logo">
+        <div class="brand-text">
+            <h1>Intelligent Property Solutions Pvt. Ltd.</h1>
+            <p>Your Complete Partner in Property Planning & Design</p>
+        </div>
+    </div>
+    <a href="tel:+919325179055" class="call-btn">Call Now: 9325179055</a>
+</header>
+
+<!-- MENU -->
+<nav class="menu-bar">
+    <div class="container">
+        <ul id="mainMenu" class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a class="active" href="gallery.html">Project Gallery</a></li>
+            <li><a href="our-client.html">Our Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg" style="background-image:url('hero.jpg')"></div>
+    <div class="hero-content">
+        <h2>Project <br><span>Photo Gallery</span></h2>
+        <p>Browse completed projects — Tap any photo to view full image.</p>
+    </div>
+</section>
+
+<!-- CONTENT START -->
+<section class="container intro-card">
+    <h3>Our Work — Real Site Images</h3>
+    <p class="muted">
+        All images below are from actual waterproofing, PU/APP membrane, basement & podium projects.
+        Click any photo to open it in full-screen.
+    </p>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="container">
+    <h3>Gallery</h3>
+
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="image/photo1.jpg"><div class="caption">Project 1</div></div>
+        <div class="gallery-item"><img src="image/photo2.jpg"><div class="caption">Project 2</div></div>
+        <div class="gallery-item"><img src="image/photo3.jpg"><div class="caption">Project 3</div></div>
+        <div class="gallery-item"><img src="image/photo4.jpg"><div class="caption">Project 4</div></div>
+        <div class="gallery-item"><img src="image/photo5.jpg"><div class="caption">Project 5</div></div>
+        <div class="gallery-item"><img src="image/photo6.jpg"><div class="caption">Project 6</div></div>
+        <div class="gallery-item"><img src="image/photo7.jpg"><div class="caption">Project 7</div></div>
+        <div class="gallery-item"><img src="image/photo8.jpg"><div class="caption">Project 8</div></div>
+        <div class="gallery-item"><img src="image/photo9.jpg"><div class="caption">Project 9</div></div>
+        <div class="gallery-item"><img src="image/photo10.jpg"><div class="caption">Project 10</div></div>
+        <div class="gallery-item"><img src="image/photo11.jpg"><div class="caption">Project 11</div></div>
+        <div class="gallery-item"><img src="image/photo12.jpg"><div class="caption">Project 12</div></div>
+    </div>
+</section>
+
+<!-- POPUP VIEWER -->
+<div class="img-popup" id="imgPopup">
+    <img id="popupImg" src="">
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <div class="f-logo-wrap">
+                <img src="logo.jpg" class="footer-logo">
+            </div>
+            <h4>Intelligent Property Solutions Pvt. Ltd.</h4>
+            <p>Reliable Waterproofing & Construction Experts.</p>
+        </div>
+
+        <div class="footer-contact">
+            <h5>Office</h5>
+            <p>Plot No. 38, Saraswati Kunj, Sector-54, Gurugram</p>
+            <p>📞 9325179055</p>
+            <p>📧 ipswaterproofing@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 IPSPL | Designed by <a href="https://fastupdate.online" target="_blank">Prince Tech Solutions Pvt. Ltd.</a></p>
+    </div>
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<a href="contact.html" class="float-left">📩 Enquiry</a>
+<a href="https://wa.me/919325179055" class="float-right">💬</a>
+
+<script>
+    // Full image viewer
+    const popup = document.getElementById('imgPopup');
+    const popupImg = document.getElementById('popupImg');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            popupImg.src = img.src;
+            popup.style.display = "flex";
+        });
+    });
+
+    popup.addEventListener('click', () => {
+        popup.style.display = "none";
+    });
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>
