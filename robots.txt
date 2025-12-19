@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary folders
+Disallow: /image/
+Disallow: /tmp/
+Disallow: /private/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /service.html
+Allow: /gallery.html
+Allow: /our-client.html
+Allow: /contact.html
+
+# Sitemap for Google
+Sitemap: https://ipspl.website/sitemap.xml
